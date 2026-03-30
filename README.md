@@ -1,16 +1,17 @@
 # My GUN4IR blog and mods
+
 ## Table of Contents
 
 - [Trigger switch and Recoil](#trigger-switch-and-recoil)
 - [Wiimote Sensor and Lens](#wiimote-sensor-and-lens)
 - [USB Hub and Power](#usb-hub-and-power)
-    - [USB over CAT](#usb-over-cat)
-    - [Custom hub](#custom-hub)
-    - [GUN4IR logo](#gun4ir-logo)
-    - [Future ideas](#future-ideas)
+  - [USB over CAT](#usb-over-cat)
+  - [Custom hub](#custom-hub)
+    - [RJ45 Pinout](#rj45-pinout)
+  - [GUN4IR logo](#gun4ir-logo)
+  - [Future ideas](#future-ideas)
 - [Bill of materials](#bill-of-materials)
 - [Credits and references](#credits-and-references)
-
 
 I've modified two GunCon1 controllers for my GUN4IR build.
 
@@ -61,6 +62,24 @@ To my surprise, I got all dimensions right, I didn't need to reprint. Some of th
 Wiring is straightforward. I did, however, burn out a USB hub due to incorrect USB wiring. This was caused by a Google search that returned an image with the wrong USB‑B pinout.
 
 ![Wiring inside my custom hub](img/IMG_20251005_000734363.jpg)
+
+
+
+### RJ45 Pinout
+
+Look for "641D 8P" in AliExpress. This is a nice wired modular jack 8P8C assembly, compatible to accept network etherne wires. The twisted pairs are being use hoping that the USB datapair will benefit from this. The 24V is making use of 4 wires. This is the pinout used:
+
+
+| 641D 8P Connector | RJ45 Pin | RJ45 T-568B  | Function     |
+| ------------------- | ---------- | -------------- | -------------- |
+| Yellow            | 6        | Green        | USB VCC      |
+| Black             | 3        | Green/White  | USB GND      |
+| Red               | 4        | Blue         | USB D+       |
+| Green             | 5        | Blue/White   | USB D-       |
+| White             | 8        | Brown        | Solenoid 24V |
+| Brown             | 7        | Brown/White  | Solenoid 24V |
+| Orange            | 2        | Orange       | Solenoid 0V  |
+| Blue              | 1        | Orange/White | Solenoid 0V  |
 
 ## GUN4IR logo
 
